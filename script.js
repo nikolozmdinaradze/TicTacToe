@@ -4,6 +4,10 @@ let X_turn = true;
 
 const playBtnsIcon = document.querySelectorAll(".play button p");
 
+console.log(window.screen.width)
+
+
+
 
 let xwon = document.getElementById("xwon");
 xwon.innerHTML = localStorage.getItem("xwon");
@@ -106,13 +110,20 @@ function endGame(){
     window.location.reload()
 }
 
+
 function changeIcon(){
-    playBtnsIcon.forEach(function(icon){
-        if(X_turn){
-            icon.innerHTML = "X"
-        }
-        else{
-            icon.innerHTML = "O"
-        }
-    })
+    if(window.screen.width >= 776){
+        playBtnsIcon.forEach(function(icon){
+            if(X_turn){
+                icon.innerHTML = "X"
+            }
+            else{
+                icon.innerHTML = "O"
+            }
+        })
+    }
+    else{
+        return 0;
+    }
 }
+
