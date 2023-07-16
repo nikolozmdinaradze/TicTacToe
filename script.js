@@ -44,7 +44,7 @@ function check(list) {
 
       (list[0] === list[3] && list[3] === list[6] && list[0] === 1) ||
       (list[1] === list[4] && list[4] === list[7] && list[1] === 1) ||
-      (list[2] === list[5] && list[6] === list[6] && list[2] === 1)
+      (list[2] === list[5] && list[5] === list[8] && list[2] === 1)
     ) {
 
     if(localStorage.getItem("xwon")){
@@ -63,7 +63,7 @@ function check(list) {
       (list[2] === list[4] && list[4] === list[6] && list[2] === 0) ||
       (list[0] === list[3] && list[3] === list[6] && list[0] === 0) ||
       (list[1] === list[4] && list[4] === list[7] && list[1] === 0) ||
-      (list[2] === list[5] && list[6] === list[6] && list[2] === 0)
+      (list[2] === list[5] && list[5] === list[8] && list[2] === 0)
     ) {
       
     if(localStorage.getItem("ywon")){
@@ -103,7 +103,7 @@ function endGame(){
     let game = [null, null, null, null,null,null,null,null,null]
     let X_turn = true;
     localStorage.clear();
-    window.location.replace("index.html")
+    window.location.reload()
 }
 
 function changeIcon(){
